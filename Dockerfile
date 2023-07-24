@@ -14,8 +14,8 @@ RUN npm install
 COPY . .
 
 
-npm install prisma -g
-prisma generate
+RUN npm install prisma -g
+RUN prisma generate
 
 
 # Build the Next.js application
