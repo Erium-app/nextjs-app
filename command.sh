@@ -1,0 +1,1 @@
+NETWORK_NAME="my-network" && docker network inspect "$NETWORK_NAME" &>/dev/null || docker network create "$NETWORK_NAME" && docker rm -f nginx-container nextjs-app &>/dev/null || true && docker run -d --name nextjs-app --network my-network eriumzone/my-nextjs-app && docker run -d --name nginx-container --network my-network -p 80:80 --restart=no eriumzone/my-nginx
