@@ -5,7 +5,7 @@ import { BsInfoCircleFill } from "react-icons/bs";
 import { IoIosWifi } from "react-icons/io";
 
 const WiFi = () => {
-  // http://localhost:3000/api/changeWifiCredentials
+  // /api/changeWifiCredentials
 
   const [isChecked, setIsChecked] = useState(false);
   const [ssid , setSsid] = useState('')
@@ -35,7 +35,7 @@ const WiFi = () => {
 
 
     try {
-      const res = await fetch('http://localhost:3000/api/connectToWiFi', {
+      const res = await fetch('/api/connectToWiFi', {
         headers: {
           'Content-Type': 'application/json'
         },

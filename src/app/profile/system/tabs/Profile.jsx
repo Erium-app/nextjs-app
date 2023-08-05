@@ -36,7 +36,7 @@ const Profile = () => {
     console.log(passwordConfirm)
 
     // try {
-    //   const res = await fetch('http://localhost:3000/api/changeWifiCredentials', {
+    //   const res = await fetch('/api/changeWifiCredentials', {
     //     headers: {
     //       'Content-Type': 'application/json'
     //     },

@@ -6,7 +6,7 @@ const page = () => {
     const [systemInfo, setSystemInfo] = useState()
 
     const getSystemInfo = async () => {
-            const res = await fetch(`http://localhost:3000/api/os`, {
+            const res = await fetch(`/api/os`, {
               headers: {
                 "Content-Type": "application/json",
               },
