@@ -1,10 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from 'next-auth/providers/credentials'
-// import GoogleProvider from "next-auth/providers/google";
-// import User from "@/models/User";
 import { signJwtToken } from "@/library/jwt";
-import bcrypt from 'bcrypt'
-// import dbConnect from '@/database/dbConnect.js';
+import bcrypt from 'bcrypt';
 import prisma from "@/database/prismaConnect";
 
 const handler = NextAuth({
@@ -20,9 +17,6 @@ const handler = NextAuth({
 
                 console.log(email)
                 console.log(password)
-                // await dbConnect.connect()
-                                
-                // const user = await User.findOne({ email })
 
                 const user = await prisma.user.findUnique({ where: { email } });
 
@@ -37,7 +31,6 @@ const handler = NextAuth({
                     throw new Error("Invalid input")
                 } else {
                     console.log(user)
-                    // const {password, ...currentUser} = user
                     const { password, ...currentUser } = user;
                     console.log(currentUser);
                     const accessToken = signJwtToken(currentUser, {expiresIn: '6d'})
@@ -51,11 +44,6 @@ const handler = NextAuth({
                 }
             }
         })
-
-     //     GoogleProvider({
-    //         clientId: process.env.GOOGLE_CLIENT_ID,
-    //         clientSecret: process.env.GOOGLE_CLIENT_SECRET
-    //       }),
     ],
     pages: {
         signIn: '/login'

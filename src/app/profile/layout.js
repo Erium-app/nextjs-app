@@ -1,17 +1,17 @@
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import Provider from '@/SessionProvider'
 import Navbar from "@/components/Navbar"
 import {BiUser, BiCube} from 'react-icons/bi'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 
 export default function RootLayout({ children }) {
-  
+  // className={inter.className}
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
       <Provider>
           <div className="w-screen max-h-screen flex justify-start items-start">
     <Navbar/>

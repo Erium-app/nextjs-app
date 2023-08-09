@@ -1,8 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import Provider from '@/SessionProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+
+// const inter = Inter({ subsets: ['latin'], display: 'swap', adjustFontFallback: false})
+
+
 
 export const metadata = {
   title: 'Erium Node',
@@ -10,10 +14,10 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  
+  // className={inter.className}
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
       <Provider>
         {children}
         </Provider>
