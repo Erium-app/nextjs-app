@@ -35,7 +35,7 @@ const WiFi = () => {
 
 
     try {
-      const res = await fetch('/api/connectToWiFi', {
+      const res = await fetch('http://192.168.1.35/api/connectToWiFi', {
         headers: {
           'Content-Type': 'application/json'
         },

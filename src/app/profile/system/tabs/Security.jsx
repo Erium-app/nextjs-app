@@ -32,7 +32,7 @@ const Security = () => {
 
 
     try {
-      const res = await fetch('/api/changeWifiCredentials', {
+      const res = await fetch('http://192.168.1.35/api/changeWifiCredentials', {
         headers: {
           'Content-Type': 'application/json'
         },
@@ -66,7 +66,7 @@ const Security = () => {
 
 
     try {
-      const res = await fetch('/api/changeHostPassword', {
+      const res = await fetch('http://192.168.1.35/api/changeHostPassword', {
         headers: {
           'Content-Type': 'application/json'
         },

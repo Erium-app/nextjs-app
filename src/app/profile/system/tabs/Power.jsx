@@ -3,7 +3,7 @@ import React from 'react'
 const Power = () => {
   const handleReboot = async () => {
     try {
-      const res = await fetch('/api/rebootSystem', {
+      const res = await fetch('http://192.168.1.35/api/rebootSystem', {
         method: 'POST',
       })
 
@@ -23,7 +23,7 @@ const Power = () => {
   const handleShutdown = async () => {
 
     try {
-      const res = await fetch('/api/shutdownSystem', {
+      const res = await fetch('http://192.168.1.35/api/shutdownSystem', {
         method: 'POST',
       })
 
