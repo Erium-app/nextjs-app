@@ -43,7 +43,7 @@ const Register = () => {
 
 
     try {
-      const res = await fetch('http://192.168.1.35/api/register', {
+      const res = await fetch('http://erium.local/api/register', {
         headers: {
           'Content-Type': 'application/json'
         },

@@ -35,7 +35,7 @@ const WiFi = () => {
 
 
     try {
-      const res = await fetch('http://192.168.1.35/api/connectToWiFi', {
+      const res = await fetch('http://erium.local/api/connectToWiFi', {
         headers: {
           'Content-Type': 'application/json'
         },
