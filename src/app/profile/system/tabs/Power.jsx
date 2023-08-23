@@ -3,7 +3,7 @@ import React from 'react'
 const Power = () => {
   const handleReboot = async () => {
     try {
-      const res = await fetch('http://192.168.1.35/api/rebootSystem', {
+      const res = await fetch('http://erium.local/api/rebootSystem', {
         method: 'POST',
       })
 
@@ -23,7 +23,7 @@ const Power = () => {
   const handleShutdown = async () => {
 
     try {
-      const res = await fetch('http://192.168.1.35/api/shutdownSystem', {
+      const res = await fetch('http://erium.local/api/shutdownSystem', {
         method: 'POST',
       })
 

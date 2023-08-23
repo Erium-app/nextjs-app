@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt'
+import { NextResponse } from 'next/server';
 import prisma from '@/database/prismaConnect';
 
 
@@ -29,8 +30,10 @@ export async function POST(req) {
 
     const { password, ...user } = newUser;
 
-    return new Response(JSON.stringify(user), { status: 201 });
+    // return new Response(JSON.stringify(user), { status: 201 });
+    return NextResponse(JSON.stringify(user), { status: 201 });
   } catch (error) {
-    return new Response(JSON.stringify(error.message), { status: 500 });
+    // return new Response(JSON.stringify(error.message), { status: 500 });
+    return NextResponse(JSON.stringify(error.message), { status: 500 });
   }
 }

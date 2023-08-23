@@ -6,7 +6,7 @@ const Info = () => {
     const [systemInfo, setSystemInfo] = useState()
 
     const getSystemInfo = async () => {
-            const res = await fetch(`http://192.168.1.35/api/os`, {
+            const res = await fetch(`http://erium.local/api/os`, {
               headers: {
                 "Content-Type": "application/json",
               },
